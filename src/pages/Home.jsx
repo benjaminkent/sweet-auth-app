@@ -23,7 +23,7 @@ class Home extends Component {
           <div className="home-message">
             <p>You successfully logged in. Congratulations!</p>
             <p>
-              Now enjoy your beautiful face <i class="far fa-grin-alt" />
+              Now enjoy your beautiful face <i className="far fa-grin-alt" />
             </p>
           </div>
           <img
