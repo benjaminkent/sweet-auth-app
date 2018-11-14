@@ -1,0 +1,14 @@
+header {
+  background-color: $salmon;
+  margin: 0;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: $capriola;
+  font-size: 0.7rem;
+}
+
+.logout {
+  font-size: 1rem;
+  font-family: $capriola;
+}
