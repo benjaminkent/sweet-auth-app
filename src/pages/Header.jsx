@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import Auth from '../auth/auth.js'
 
 const auth = new Auth()
@@ -12,10 +13,12 @@ class Header extends Component {
     return (
       <div>
         <header>
-          <h2>Hello !</h2>
-          <button onClick={this._logout} className="logout">
-            Log out
-          </button>
+          <h2 className="hello">Hello !</h2>
+          <Link to="/">
+            <button onClick={this._logout} className="logout">
+              Log out
+            </button>
+          </Link>
         </header>
       </div>
     )
