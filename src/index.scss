@@ -1,7 +1,15 @@
+$snow: #efedea;
+$deep-violet: #340068;
+
+@import url('https://fonts.googleapis.com/css?family=Capriola');
+
+$capriola: 'Capriola', sans-serif;
+
 @import 'splash';
 @import 'home';
 
 body {
   margin: 0;
   padding: 0;
+  font-size: 17px;
 }

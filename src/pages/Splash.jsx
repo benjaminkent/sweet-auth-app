@@ -6,7 +6,7 @@ class Splash extends Component {
       <div className="splash-body">
         <main className="splash-main">
           <h1 className="splash-header">
-            Welcome to the sweetest app in the world!
+            Welcome to the coolest app in the world
           </h1>
           <p className="splash-welcome">Have a blast here, friend!</p>
           <div>
