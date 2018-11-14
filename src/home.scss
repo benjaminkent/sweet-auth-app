@@ -1,0 +1,21 @@
+.home-body {
+  background-color: $snow;
+  height: 100%;
+}
+
+.home-message {
+  margin-bottom: 2rem;
+}
+
+.profile-image {
+  height: 25rem;
+  margin: 0 auto 10rem auto;
+  border-radius: 5px;
+}
+
+.home-main {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-family: $capriola;
+}
