@@ -7,6 +7,7 @@ class Splash extends Component {
   _login = () => {
     auth.login()
   }
+
   render() {
     return (
       <div className="splash-body">
