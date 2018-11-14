@@ -2,6 +2,8 @@ import auth0 from 'auth0-js'
 import history from './history'
 
 export default class Auth {
+  userProfile
+
   auth0 = new auth0.WebAuth({
     domain: 'benjaminkentjehl.auth0.com',
     clientID: 'gZI1HKHjyZT7a26qd1eEj9S4xqULQj46',
@@ -9,6 +11,13 @@ export default class Auth {
     responseType: 'token id_token',
     scope: 'openid profile'
   })
+
+  constructor() {
+    this.login = this.login.bind(this)
+    this.logout = this.logout.bind(this)
+    this.handleAuthentication = this.handleAuthentication.bind(this)
+    this.isAuthenticated = this.isAuthenticated.bind(this)
+  }
 
   login() {
     this.auth0.authorize()

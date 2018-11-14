@@ -1,0 +1,15 @@
+.loading-image {
+  height: 20rem;
+  margin: 0 auto;
+}
+
+.loading {
+  margin-top: 3rem;
+  font-family: $capriola;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
