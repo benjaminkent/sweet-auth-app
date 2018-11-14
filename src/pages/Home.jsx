@@ -3,18 +3,32 @@ import React, { Component } from 'react'
 import Header from './Header'
 
 class Home extends Component {
+  state = {
+    profile: ''
+  }
+
+  componentDidMount() {
+    if (this.props.auth.isAuthenticated()) {
+      this.props.auth.getProfile((err, profile) => {
+        this.setState({ profile, err })
+      })
+    }
+  }
+
   render() {
     return (
       <div className="home-body">
-        <Header />
+        <Header name={this.state.profile.given_name} />
         <main className="home-main">
           <div className="home-message">
             <p>You successfully logged in. Congratulations!</p>
-            <p>Now enjoy your beautiful face.</p>
+            <p>
+              Now enjoy your beautiful face <i class="far fa-grin-alt" />
+            </p>
           </div>
           <img
             className="profile-image"
-            src="https://images.unsplash.com/photo-1542099720-6a8998d675d7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=57382326a862347ca5c113fa30be535f&auto=format&fit=crop&w=802&q=80"
+            src={this.state.profile.picture}
             alt="profile"
           />
         </main>

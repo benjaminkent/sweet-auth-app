@@ -62,4 +62,23 @@ export default class Auth {
     let expiresAt = JSON.parse(localStorage.getItem('expires_at'))
     return new Date().getTime() < expiresAt
   }
+
+  getAccessToken() {
+    const accessToken = localStorage.getItem('access_token')
+    if (!accessToken) {
+      throw new Error('No Access Token found')
+    }
+    return accessToken
+  }
+
+  //...
+  getProfile(cb) {
+    let accessToken = this.getAccessToken()
+    this.auth0.client.userInfo(accessToken, (err, profile) => {
+      if (profile) {
+        this.userProfile = profile
+      }
+      cb(err, profile)
+    })
+  }
 }

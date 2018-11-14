@@ -13,7 +13,7 @@ class Header extends Component {
     return (
       <div>
         <header>
-          <h2 className="hello">Hello !</h2>
+          <h2 className="hello">Hello {this.props.name}!</h2>
           <Link to="/">
             <button onClick={this._logout} className="logout">
               Log out
